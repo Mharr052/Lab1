@@ -39,9 +39,11 @@ public class PointCPTest {
     // If he did, create the PointCP object from these arguments.
     // If he did not, prompt the user for them.
     try {
-      point = new PointCP(args[0].toUpperCase().charAt(0), 
-        Double.valueOf(args[1]).doubleValue(), 
-        Double.valueOf(args[2]).doubleValue());
+      if (args[0].toUpperCase().charAt(0) == 'C') {
+        point = new PointC(Double.valueOf(args[1]).doubleValue(), Double.valueOf(args[2]).doubleValue());
+      } else if (args[0].toUpperCase().charAt(0) == 'P') {
+        point = new PointP(Double.valueOf(args[1]).doubleValue(), Double.valueOf(args[2]).doubleValue());
+      }
     } catch(Exception e) {
       // If we arrive here, it is because either there were no
       // command line arguments, or they were invalid
@@ -148,6 +150,10 @@ public class PointCPTest {
       isOK = false;
     }
     //Return a new PointCP object
-    return (new PointCP(coordType, a, b));
+    if (coordType == 'C') {
+      return new PointC(a,b);
+    } else {
+      return new PointP(a,b);
+    }
   }
 }
