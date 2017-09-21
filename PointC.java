@@ -8,7 +8,7 @@
  *
  * @author matt1
  */
-public class PointC {
+public class PointC implements PointCP {
     
     
  private double x;
@@ -27,16 +27,13 @@ public double getY() {
     return y;
 }
 
-public double getRho() {
-  
-return (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));  
+public double getRho() { 
+    return (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));  
 }
-  
+
 public double getTheta() {
- 
-return Math.toDegrees(Math.atan2(y, x));
- 
- }
+    return Math.toDegrees(Math.atan2(y, x));
+}
  public double getDistance(PointCP pointC)
   {
     // Obtain differences in X and Y, sign is not important as these values
