@@ -30,12 +30,28 @@ public double getY() {
 public double getRho() { 
     return (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));  
 }
-  
- public double getTheta() {
-    return Math.toDegrees(Math.atan2(y, x));
- }
-  
 
+public double getTheta() {
+    return Math.toDegrees(Math.atan2(y, x));
+}
+ public double getDistance(PointCP pointC)
+  {
+    // Obtain differences in X and Y, sign is not important as these values
+    // will be squared later.
+    double deltaX = getX() - pointC.getX();
+    double deltaY = getY() - pointC.getY();
+    
+    return Math.sqrt((Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
+  } 
+public PointC rotatePoint(double rotation)
+  {
+    double radRotation = Math.toRadians(rotation);
+    
+        
+    return new PointC(
+      (Math.cos(radRotation) * x) - (Math.sin(radRotation) * y),
+      (Math.sin(radRotation) * x) + (Math.cos(radRotation) * y));
+  }
 }
 
 
