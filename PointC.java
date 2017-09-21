@@ -49,12 +49,11 @@ return Math.toDegrees(Math.atan2(y, x));
 public PointC rotatePoint(double rotation)
   {
     double radRotation = Math.toRadians(rotation);
-    double X = getX();
-    double Y = getY();
+    
         
     return new PointC(
-      (Math.cos(radRotation) * X) - (Math.sin(radRotation) * Y),
-      (Math.sin(radRotation) * X) + (Math.cos(radRotation) * Y));
+      (Math.cos(radRotation) * x) - (Math.sin(radRotation) * y),
+      (Math.sin(radRotation) * x) + (Math.cos(radRotation) * y));
   }
 }
 
