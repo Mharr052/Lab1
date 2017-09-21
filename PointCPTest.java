@@ -31,6 +31,7 @@ public class PointCPTest {
    * @param args[2] The value of Y or THETA.
    */
   public static void main(String[] args) {
+    
     PointCP point = new PointC(1,1);
 
     System.out.println("Cartesian-Polar Coordinates Conversion Program");
