@@ -2,7 +2,7 @@
  * Contains instances of coordinates in polar format.
  * Methods exist to convert these polar coordinates to cartesian and back.
  */
-public class PointP extends PointCP {
+public class PointP implements PointCP {
 
     private double rho;
 
