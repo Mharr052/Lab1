@@ -1,6 +1,9 @@
 /**
  * Contains instances of coordinates in polar format.
  * Methods exist to convert these polar coordinates to cartesian and back.
+ * 
+ * @author matt1
+ * @author John L. Carveth
  */
 public class PointP implements PointCP {
 

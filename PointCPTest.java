@@ -11,6 +11,8 @@ import java.io.*;
  * @author Fran&ccedil;ois B&eacute;langer
  * @author Dr Timothy C. Lethbridge
  * @author Paul Holden
+ * @author matt1
+ * @author John L. Carveth
  * @version July 2000
  */
 public class PointCPTest {
@@ -31,7 +33,7 @@ public class PointCPTest {
    * @param args[2] The value of Y or THETA.
    */
   public static void main(String[] args) {
-    
+
     PointCP point = new PointC(1,1);
 
     System.out.println("Cartesian-Polar Coordinates Conversion Program");

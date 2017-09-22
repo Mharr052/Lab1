@@ -5,8 +5,8 @@
  */
 
 /**
- *
  * @author matt1
+ * @author John L. Carveth
  */
 public class PointC implements PointCP {
     
@@ -52,6 +52,15 @@ public PointC rotatePoint(double rotation)
       (Math.cos(radRotation) * x) - (Math.sin(radRotation) * y),
       (Math.sin(radRotation) * x) + (Math.cos(radRotation) * y));
   }
+
+  /**
+     * Returns information about the coordinates.
+     *
+     * @return A String containing information about the coordinates.
+     */
+    public String toString() {
+        return "Stored as Cartesian [" + getX() + "," + getY() + "]" + "\n";
+    }
 }
 
 

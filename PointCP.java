@@ -10,6 +10,8 @@
  *
  * @author Fran&ccedil;ois B&eacute;langer
  * @author Dr Timothy C. Lethbridge
+ * @author matt1
+ * @author John L. Carveth
  * @version July 2000
  */
 public interface PointCP {
