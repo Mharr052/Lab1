@@ -8,7 +8,7 @@
  * @author matt1
  * @author John L. Carveth
  */
-public class PointC {
+public class PointC implements PointCP {
     
     
  private double x;
