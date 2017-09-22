@@ -11,6 +11,8 @@ import java.io.*;
  * @author Fran&ccedil;ois B&eacute;langer
  * @author Dr Timothy C. Lethbridge
  * @author Paul Holden
+ * @author matt1
+ * @author John L. Carveth
  * @version July 2000
  */
 public class PointCPTest {
@@ -31,7 +33,8 @@ public class PointCPTest {
    * @param args[2] The value of Y or THETA.
    */
   public static void main(String[] args) {
-    PointCP point;
+
+    PointCP point = new PointC(1,1);
 
     System.out.println("Cartesian-Polar Coordinates Conversion Program");
 
@@ -57,11 +60,18 @@ public class PointCPTest {
       }
     }
     System.out.println("\nYou entered:\n" + point);
-    point.convertStorageToCartesian();
-    System.out.println("\nAfter asking to store as Cartesian:\n" + point);
-    point.convertStorageToPolar();
-    System.out.println("\nAfter asking to store as Polar:\n" + point);
+    
+    if (point instanceof PointP) {
+      System.out.println("\nAfter asking to store as Polar:\n" + point);
+      PointCP temp = new PointC(point.getX(), point.getY());
+      System.out.println("\nAfter asking to store as Cartesian:\n" + temp);
+    } else if (point instanceof PointC) {
+      System.out.println("\nAfter asking to store as Polar:\n" + point);
+      PointCP temp = new PointP(point.getRho(), point.getTheta());
+      System.out.println("\nAfter asking to store as Cartesian:\n" + temp);
+    }
   }
+  
 
   /**
    * This method obtains input from the user and verifies that
