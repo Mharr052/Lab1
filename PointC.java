@@ -66,5 +66,5 @@ public PointC rotatePoint(double rotation)
     }
 }
 
-}
+
 
